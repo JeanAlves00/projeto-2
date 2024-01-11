@@ -1,85 +1,118 @@
 body {
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    background-color: #2ecc71;
-    color: white;
     text-align: center;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header img {
-    max-width: 50px;
+    max-width: 33.33%;
     height: auto;
-    margin-right: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
-h1 {
-    margin: 0;
+#animated-title {
+    margin-top: 10px;
 }
 
 form {
+    margin-top: 20px;
     text-align: center;
-    margin: 20px auto;
 }
 
-input {
+form input {
+    margin-bottom: 10px;
     padding: 10px;
-    margin: 5px;
-    width: 40%;
+    width: 100%;
     box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-input[type="text"] {
-    nargin-right: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #2ecc71;
-    color: white;
-    border: none;
+form button {
+    padding: 10px;
     cursor: pointer;
+    background-color: #87CEEB;
+    color: #fff;
+    border: none;
     border-radius: 5px;
 }
 
 table {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
+    margin-top: 20px;
     border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #87CEEB;
 }
 
 th, td {
-    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-    border-radius: 5px;
 }
 
-th {
-    background-color: #2ecc71;
-    color: white;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tfoot {
+tfoot td {
     font-weight: bold;
 }
 
-td img {
-    max-width: 20px;
-    height: auto;
+img[src='./images/reprovado.png'] {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+img[src='./images/aprovado.png'] {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.resultado {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #87CEEB;
+    color: #fff;
+}
+
+.aprovado {
+    background-color: #44e9a9;
+}
+
+.reprovado {
+    background-color: #ff4444;
+}
+
+tfoot td:last-child {
+    text-align: center;
+}
+
+/* Seu estilo existente aqui */
+
+#nota-minima {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#nota-minima-valor {
+    color: #ff4444; /* Cor para destacar, ajuste conforme desejado */
 }
